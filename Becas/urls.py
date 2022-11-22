@@ -4,8 +4,8 @@ from Becas_Universitarias.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("inicio/", inicio),
-    path('universidades/', Universidades),
-    path('becas', Becas),
-    path('postulantes/', Postulantes),
+    path('inicio/', inicio, name="global-inicio"),
+    path('universidades/', Universidades, name="global-universidades"),
+    path('becas/', Becas, name="global-becas"),
+    path('postulantes/', Postulantes, name="global-postulantes"),
 ]

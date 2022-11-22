@@ -1,22 +1,20 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from Becas_Universitarias.forms import PostulantesForms
 from Becas_Universitarias.models import PostulantesModels
 
 def inicio (request):
-    return render(request, "Becas_Universitarias/index.html")
+    return render(request, "Becas_Universitarias/base.html")
 
 
 def Universidades(request):
-    return HttpResponse("Estas en la sección de universidades")
-
+    return render(request, "Becas_Universitarias/universidades.html")
 
 def Becas(request):
-    return HttpResponse("Estas en la sección de becas")
+    return render(request, "Becas_Universitarias/becas.html")
 
 
 def Postulantes(request):
-    return HttpResponse("Estas en la sección de postulantes")
+    return render(request, "Becas_Universitarias/postulantes.html")
 
 
 def nuevo_postulante(request):

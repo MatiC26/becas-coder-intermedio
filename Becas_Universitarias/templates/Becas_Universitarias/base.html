@@ -22,10 +22,10 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#!" style="color: blue">Becas Globales🎓</a>
-                <a class="navbar-brand" href= "#">Universidades</a>
-                <a class="navbar-brand" href="#">Becas</a>
-                <a class="navbar-brand" href="#">Postulantes</a>
+                <a class="navbar-brand" href="{% url 'global-inicio' %}" style="color: blue">Becas Globales🎓</a>
+                <a class="navbar-brand" href="{% url 'global-universidades' %}">Universidades</a>
+                <a class="navbar-brand" href="{% url 'global-becas' %}">Becas</a>
+                <a class="navbar-brand" href="{% url 'global-postulantes' %}">Postulantes</a>
                 <a class="btn btn-primary" href="#contacto">Contacto
                 </a>
             </div>
@@ -36,7 +36,7 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h2 class="mb-5">¡Consigue tu beca universitaria con nosotros!</h2>
+                            <h2 class="mb-5">¡Conseguí tu beca universitaria con nosotros!</h2>
                             <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
                                 <div class="row">
                                     <div class="col">
@@ -54,6 +54,11 @@
                 </div>
             </div>
         </header>
+
+        {% block coder %}
+
+        {% endblock %}
+
         <!-- Footer-->
         <footer class="footer bg-light">
             <div class="container">
