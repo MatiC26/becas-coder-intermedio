@@ -25,3 +25,16 @@ def creacion_postulantesViews(request):
         postulante.save()
     formulario = PostulantesForms()
     return render(request, "Becas_Universitarias/postulantes_formulario.html", {"formulario": formulario})
+
+def buscar_postulantes(request):
+    
+    return render(request, "Becas_Universitarias/buscar_postulantes.html")
+    
+    
+
+def resultados_busqueda_postulantes(request):
+    print(request.GET)
+    return render(request, "Becas_Universitarias/resultados_busqueda_postulantes.html")
+    
+
+

@@ -21,5 +21,6 @@ class Becas(models.Model):
 class PostulantesModels(models.Model):
     nombre = CharField(max_length= 100)
     apellido = CharField(max_length=100)
+    descripcion = CharField(max_length=2000)
     contacto = TextField()
     email = EmailField(max_length= 100)
