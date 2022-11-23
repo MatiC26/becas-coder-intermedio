@@ -1,10 +1,27 @@
-{% extends "Becas_Universitarias/base.html" %}
+{% extends "Becas_Universitarias/base.html" %} {% block coder %}
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h3>Propuestas</h3>
+    </div>
+    <div class="col-12 text-center">
+      <p>Estas son las universidades que tenemos para vos</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <label class="form-label">
+        Selecciona una universidad
+      </label>
+      <select name="Seleccionar" class="form-select">
+        {% for item in  universidad%}
+        <option value="">{{ item.nombre }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+</div>
 
-{% block coder %}
-
-<h3>Propuestas</h3>
-<p>Estas son las universidades que tenemos para vos</p>
-
-<a href="{% url 'global-inicio' %}"> Ir al inicio </a>
+<a href="{% url 'global-inicio' %}">Ir al inicio</a>
 
 {% endblock %}

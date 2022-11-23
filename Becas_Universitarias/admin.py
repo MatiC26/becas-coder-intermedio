@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from Becas_Universitarias.models import *
+
+
+admin.site.register(UniversidadesModel)
+admin.site.register(Becas)
+admin.site.register(PostulantesModels)
+
