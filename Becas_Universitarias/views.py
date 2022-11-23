@@ -18,7 +18,6 @@ def creacion_postulantesViews(request):
         postulante = PostulantesModels(
             nombre=request.POST['nombre'],
             apellido=request.POST['apellido'],
-            descripcion=request.POST['descripcion'],
             contacto=request.POST["contacto"],
             email=request.POST["email"]
         )
@@ -31,10 +30,9 @@ def buscar_postulantes(request):
     return render(request, "Becas_Universitarias/buscar_postulantes.html")
     
     
-
 def resultados_busqueda_postulantes(request):
-    print(request.GET)
-    return render(request, "Becas_Universitarias/resultados_busqueda_postulantes.html")
-    
-
-
+   nombre_postulante = request.GET["nombre_postulante"]
+  
+   postulante = PostulantesModels.objects.filter(nombre_icontains=nombre_postulante)
+  
+   return render(request, "Becas_Universitarias/resultados_busqueda_postulantes.html", {{"postulante": postulante}})

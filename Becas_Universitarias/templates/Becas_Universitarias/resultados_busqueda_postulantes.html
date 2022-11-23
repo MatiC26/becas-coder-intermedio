@@ -1,0 +1,13 @@
+{% extends "Becas_Universitarias/base.html" %}
+
+{% block coder %} 
+
+<ul>
+    {% for postulantes in postulantes %}
+
+        <li>{{postulante.nombre}} - {{postulante.apellido}}</li>
+
+    {% endfor %}
+</ul>
+
+{% endblock %}
