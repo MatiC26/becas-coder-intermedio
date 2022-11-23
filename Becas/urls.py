@@ -7,6 +7,5 @@ urlpatterns = [
     path('inicio/', inicio, name="global-inicio"),
     path('universidades/', Universidades, name="global-universidades"),
     path('becas/', Becas, name="global-becas"),
-    path('postulantes/', Postulantes, name="global-postulantes"),
-    path('postulantes/crear/', creacion_postulantes, name="global-postulantes"),
+    path('postulantes/', creacion_postulantesViews, name="global-postulantes"),
 ]

@@ -2,33 +2,29 @@
 <div class="container">
   <div class="row justify-content-center my-5">
     <div class="col-12 col-md-6">
-      <form action="/postulantes/crear/" method="post">
+      <form action="/postulantes/" method="POST">
         {% csrf_token %}
         <div class="row">
           <div class="col-12 col-md-6">
-            <label class="form-label">Nombre</label>
+            <label for="nombre" class="form-label">Nombre</label>
             <input class="form-control" type="text" name="nombre" />
           </div>
           <div class="col-12 col-md-6">
-            <label class="form-label">Apellido</label>
+            <label for="apellido" class="form-label">Apellido</label>
             <input class="form-control" type="text" name="apellido" />
           </div>
           <div class="col-12">
-            <label class="form-label">Contacto</label>
-            <input class="form-control" type="number" name="contacto"/>
+            <label class="form-label" for="contacto">Contacto</label>
+            <input class="form-control" type="number" name="contacto" />
           </div>
           <div class="col-12">
-            <label class="form-label">Email</label>
+            <label class="form-label" for="email">Email</label>
             <input class="form-control" type="email" name="email" />
           </div>
         </div>
         <div class="row my-4">
           <div class="col-12">
-            <input
-              class="btn btn-primary"
-              type="submit"
-              value="Enviar datos"
-            />
+            <input class="btn btn-primary" type="submit" value="Enviar datos" />
           </div>
         </div>
       </form>
