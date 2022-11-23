@@ -18,6 +18,7 @@ def creacion_postulantesViews(request):
         postulante = PostulantesModels(
             nombre=request.POST['nombre'],
             apellido=request.POST['apellido'],
+            descripcion=request.POST['descripcion'],
             contacto=request.POST["contacto"],
             email=request.POST["email"]
         )
