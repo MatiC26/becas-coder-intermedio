@@ -33,6 +33,6 @@ def buscar_postulantes(request):
 def resultados_busqueda_postulantes(request):
    nombre_postulante = request.GET["nombre_postulante"]
   
-   postulante = PostulantesModels.objects.filter(nombre_icontains=nombre_postulante)
+   postulante = PostulantesModels.objects.filter(nombre__icontains=nombre_postulante)
   
-   return render(request, "Becas_Universitarias/resultados_busqueda_postulantes.html", {{"postulante": postulante}})
+   return render(request, "Becas_Universitarias/resultados_busqueda_postulantes.html", {"postulante": postulante})
