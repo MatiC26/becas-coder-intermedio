@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models.fields import CharField, EmailField, IntegerField, TextField
+from django.db.models.fields import CharField, EmailField, IntegerField
 
 class UniversidadesModel(models.Model):
     
@@ -22,5 +22,5 @@ class PostulantesModels(models.Model):
     nombre = CharField(max_length= 100)
     apellido = CharField(max_length=100)
     descripcion = CharField(max_length=2000)
-    contacto = TextField()
+    contacto = IntegerField()
     email = EmailField(max_length= 100)
